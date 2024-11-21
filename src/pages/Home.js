@@ -89,7 +89,74 @@ const Home = () => {
   </div>
 </section>
 
-    <h1 className="text-center text-2xl mt-4">Welcome to the Home Page</h1>;
+<section class="Features section py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="row text-center mb-12">
+            <div class="col w-full">
+                <div class="section-title">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                        We Are Always Ready to Help You & Your Family
+                    </h2>
+                    <img src="img/section-img.png" alt="#" class="mx-auto mb-4"/>
+                    <p class="text-gray-600">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row flex flex-wrap -mx-4">
+            {/* <!-- Start Single Feature --> */}
+            <div class="col w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                <div class="single-feature bg-white p-6 shadow-lg rounded-lg text-center">
+                    <div class="single-icon text-blue-500 text-4xl mb-4">
+                        <i class="icofont icofont-ambulance-cross"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                        Emergency Help
+                    </h3>
+                    <p class="text-gray-600">
+                        Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.
+                    </p>
+                </div>
+            </div>
+            {/* <!-- End Single Feature -->
+
+            <!-- Start Single Feature --> */}
+            <div class="col w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                <div class="single-feature bg-white p-6 shadow-lg rounded-lg text-center">
+                    <div class="single-icon text-green-500 text-4xl mb-4">
+                        <i class="icofont icofont-medical-sign-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                        Enriched Pharmacy
+                    </h3>
+                    <p class="text-gray-600">
+                        Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.
+                    </p>
+                </div>
+            </div>
+            {/* <!-- End Single Feature -->
+
+            <!-- Start Single Feature --> */}
+            <div class="col w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                <div class="single-feature bg-white p-6 shadow-lg rounded-lg text-center">
+                    <div class="single-icon text-red-500 text-4xl mb-4">
+                        <i class="icofont icofont-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                        Medical Treatment
+                    </h3>
+                    <p class="text-gray-600">
+                        Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.
+                    </p>
+                </div>
+            </div>
+            {/* <!-- End Single Feature --> */}
+        </div>
+    </div>
+</section>
+
+ 
     </div>
   
   )

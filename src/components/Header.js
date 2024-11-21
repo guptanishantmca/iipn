@@ -8,7 +8,7 @@ const Header = () => {
         <div className="container mx-auto flex justify-between items-center">
           {/* Top Links */}
           <ul className="flex space-x-6 text-sm text-gray-600">
-            <li><a href="#" className="hover:text-blue-500">About</a></li>
+            <li><a href="/about" className="hover:text-blue-500">About</a></li>
             <li><a href="#" className="hover:text-blue-500">Doctors</a></li>
             <li><a href="#" className="hover:text-blue-500">Contact</a></li>
             <li><a href="#" className="hover:text-blue-500">FAQ</a></li>
@@ -16,12 +16,12 @@ const Header = () => {
           {/* Top Contact Info */}
           <ul className="flex space-x-4 text-sm text-gray-600">
             <li className="flex items-center">
-              <i className="fas fa-phone mr-2 text-blue-500"></i>+880 1234 56789
+              <i className="fas fa-phone mr-2 text-blue-500"></i>+91 94184 99433
             </li>
             <li className="flex items-center">
               <i className="fas fa-envelope mr-2 text-blue-500"></i>
               <a href="mailto:email@domain.com" className="hover:text-blue-500">
-                email@domain.com
+                email@iipnsolutions.com
               </a>
             </li>
           </ul>
@@ -33,14 +33,14 @@ const Header = () => {
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/img/logo.png" alt="Logo" className="h-10 mr-2" />
-            <span className="text-2xl font-bold text-blue-500">Medi</span>
-            <span className="text-2xl font-bold text-black">plus</span>
+            {/* <img src="/img/logo.png" alt="Logo" className="h-10 mr-2" /> */}
+            <span className="text-2xl font-bold text-blue-500">IIPN</span>
+            <span className="text-2xl font-bold text-black">Solutions</span>
           </div>
 
           {/* Navigation */}
           <nav className="hidden lg:flex space-x-6 text-gray-700">
-            <a href="#" className="hover:text-blue-500">Home</a>
+            <a href="/" className="hover:text-blue-500">Home</a>
             <a href="#" className="hover:text-blue-500">Doctors</a>
             <a href="#" className="hover:text-blue-500">Services</a>
             <div className="relative group">
