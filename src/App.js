@@ -11,11 +11,11 @@ const App = () => {
       <div>
       <Header></Header>
         {/* Navigation Menu */}
-        <nav className="bg-gray-200 p-4">
+        {/* <nav className="bg-gray-200 p-4">
           <a href="/" className="mr-4 hover:text-blue-500">Home</a>
           <a href="/about" className="mr-4 hover:text-blue-500">About</a>
-          {/* <a href="/contact" className="hover:text-blue-500">Contact</a> */}
-        </nav>
+          
+        </nav> */}
       
         {/* Route Definitions */}
         <Routes>

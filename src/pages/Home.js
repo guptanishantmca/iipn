@@ -1,6 +1,13 @@
 import React from "react";
 import Slider from "../components/Slider";
+import Fun from "../components/Fun";
 const Home = () => {
+  const funFacts = [
+    { target: 3468, label: "Hospital Rooms", iconClass: "icofont icofont-home" },
+    { target: 557, label: "Specialist Doctors", iconClass: "icofont icofont-user-alt-3" },
+    { target: 4379, label: "Happy Patients", iconClass: "icofont icofont-simple-smile" },
+    { target: 32, label: "Years of Experience", iconClass: "icofont icofont-table" },
+  ];
   return (
     <div>
     <Slider/>
@@ -109,7 +116,9 @@ const Home = () => {
             <div class="col w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
                 <div class="single-feature bg-white p-6 shadow-lg rounded-lg text-center">
                     <div class="single-icon text-blue-500 text-4xl mb-4">
-                        <i class="icofont icofont-ambulance-cross"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m0-4h.01M3 21h18M4 10h16l-1.528 6.141a2 2 0 01-1.995 1.859H6.524a2 2 0 01-1.995-1.859L3 10z" />
+          </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">
                         Emergency Help
@@ -125,7 +134,9 @@ const Home = () => {
             <div class="col w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
                 <div class="single-feature bg-white p-6 shadow-lg rounded-lg text-center">
                     <div class="single-icon text-green-500 text-4xl mb-4">
-                        <i class="icofont icofont-medical-sign-alt"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m0-4h.01M3 21h18M4 10h16l-1.528 6.141a2 2 0 01-1.995 1.859H6.524a2 2 0 01-1.995-1.859L3 10z" />
+          </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">
                         Enriched Pharmacy
@@ -141,7 +152,9 @@ const Home = () => {
             <div class="col w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
                 <div class="single-feature bg-white p-6 shadow-lg rounded-lg text-center">
                     <div class="single-icon text-red-500 text-4xl mb-4">
-                        <i class="icofont icofont-stethoscope"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m0-4h.01M3 21h18M4 10h16l-1.528 6.141a2 2 0 01-1.995 1.859H6.524a2 2 0 01-1.995-1.859L3 10z" />
+          </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">
                         Medical Treatment
@@ -154,6 +167,25 @@ const Home = () => {
             {/* <!-- End Single Feature --> */}
         </div>
     </div>
+
+    <div id="fun-facts" class="fun-facts section bg-gray-800 bg-opacity-90 py-16 text-white">
+  <div class="container mx-auto">
+  <div className="bg-gray-800 bg-opacity-90 py-16 text-white">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {funFacts.map((fact, index) => (
+          <Fun
+            key={index}
+            target={fact.target}
+            label={fact.label}
+            iconClass={fact.iconClass}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </section>
 
  
