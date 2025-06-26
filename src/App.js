@@ -8,7 +8,7 @@ import About from "./pages/About";
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="pt-[100px]">
       <Header></Header>
         {/* Navigation Menu */}
         {/* <nav className="bg-gray-200 p-4">

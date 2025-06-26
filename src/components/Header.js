@@ -1,26 +1,26 @@
-import React from "react";
-
+import { Link } from "react-router-dom";
+import Menu from "../components/Menu";
 const Header = () => {
   return (
-    <header className="shadow">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow">
+
+
       {/* Topbar */}
-      <div className="bg-gray-100 py-2">
-        <div className="container mx-auto flex justify-between items-center">
-          {/* Top Links */}
-          <ul className="flex space-x-6 text-sm text-gray-600">
-            <li><a href="/about" className="hover:text-blue-500">About</a></li>
-            <li><a href="#" className="hover:text-blue-500">Doctors</a></li>
-            <li><a href="#" className="hover:text-blue-500">Contact</a></li>
-            <li><a href="#" className="hover:text-blue-500">FAQ</a></li>
+      <div className="bg-gray-100 py-2 text-sm text-gray-600">
+        <div className="container mx-auto flex justify-between items-center px-4">
+          <ul className="flex space-x-6">
+            <li><Link to="/about" className="hover:text-blue-500">About</Link></li>
+            <li><Link to="#" className="hover:text-blue-500">Doctors</Link></li>
+            <li><Link to="#" className="hover:text-blue-500">Contact</Link></li>
+            <li><Link to="#" className="hover:text-blue-500">FAQ</Link></li>
           </ul>
-          {/* Top Contact Info */}
-          <ul className="flex space-x-4 text-sm text-gray-600">
+          <ul className="flex space-x-4">
             <li className="flex items-center">
               <i className="fas fa-phone mr-2 text-blue-500"></i>+91 94184 99433
             </li>
             <li className="flex items-center">
               <i className="fas fa-envelope mr-2 text-blue-500"></i>
-              <a href="mailto:email@domain.com" className="hover:text-blue-500">
+              <a href="mailto:email@iipnsolutions.com" className="hover:text-blue-500">
                 email@iipnsolutions.com
               </a>
             </li>
@@ -28,65 +28,27 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Header Inner */}
+      {/* Main Header */}
       <div className="bg-white py-4">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="container mx-auto flex justify-between items-center px-4">
           {/* Logo */}
-          <div className="flex items-center">
-            {/* <img src="/img/logo.png" alt="Logo" className="h-10 mr-2" /> */}
+          <div className="flex items-center space-x-1">
             <span className="text-2xl font-bold text-blue-500">IIPN</span>
-            <span className="text-2xl font-bold text-black">Solutions</span>
+            <span className="text-2xl font-bold text-gray-800">Solutions</span>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden lg:flex space-x-6 text-gray-700">
-            <a href="/" className="hover:text-blue-500">Home</a>
-            <a href="#" className="hover:text-blue-500">Doctors</a>
-            <a href="#" className="hover:text-blue-500">Services</a>
-            <div className="relative group">
-              <button className="hover:text-blue-500 flex items-center">
-                Pages
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="ml-1 h-4 w-4"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.89l3.71-3.7a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01-.02-1.06z" clipRule="evenodd" />
-                </svg>
-              </button>
-              <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 p-2 space-y-2 text-sm">
-                <li><a href="#" className="hover:text-blue-500">404 Error</a></li>
-                <li><a href="#" className="hover:text-blue-500">About Us</a></li>
-              </ul>
-            </div>
-            <div className="relative group">
-              <button className="hover:text-blue-500 flex items-center">
-                Blogs
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="ml-1 h-4 w-4"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.89l3.71-3.7a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01-.02-1.06z" clipRule="evenodd" />
-                </svg>
-              </button>
-              <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 p-2 space-y-2 text-sm">
-                <li><a href="#" className="hover:text-blue-500">Blog Details</a></li>
-              </ul>
-            </div>
-            <a href="#" className="hover:text-blue-500">Contact Us</a>
-          </nav>
+          <Menu></Menu>
+           
 
-          {/* Book Appointment Button */}
+          {/* CTA Button */}
           <div>
-            <a
-              href="#"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            <Link
+              to="#"
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
             >
               Book Appointment
-            </a>
+            </Link>
           </div>
         </div>
       </div>

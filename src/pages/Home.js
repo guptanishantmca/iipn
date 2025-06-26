@@ -8,8 +8,184 @@ const Home = () => {
     { target: 4379, label: "Happy Patients", iconClass: "icofont icofont-simple-smile" },
     { target: 32, label: "Years of Experience", iconClass: "icofont icofont-table" },
   ];
+  const teamMembers = [
+  {
+    name: "Full Name",
+    designation: "Designation",
+    image: "/images/slider.jpg",
+    delay: "0.1s",
+  },
+  {
+    name: "Full Name",
+    designation: "Designation",
+    image: "/images/slider.jpg",
+    delay: "0.3s",
+  },
+  {
+    name: "Full Name",
+    designation: "Designation",
+    image: "/images/slider.jpg",
+    delay: "0.5s",
+  },
+  {
+    name: "Full Name",
+    designation: "Designation",
+    image: "/images/slider.jpg",
+    delay: "0.7s",
+  },
+];
   return (
     <div>
+      <div
+      className="relative bg-[#5189c9] pt-[12rem] pb-[9rem] mb-24 bg-no-repeat bg-bottom bg-cover"
+      
+    >
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center gap-10">
+          {/* Text Section */}
+          <div className="lg:w-1/2 text-center lg:text-left">
+            <h1 className="text-white text-4xl md:text-5xl font-bold mb-6 animate-zoomIn">
+              We Help To Push Your Business To The Top Level
+            </h1>
+            <p className="text-white mb-8 animate-zoomIn">
+              Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet
+              dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam
+              sit justo amet ipsum vero ipsum clita lorem
+            </p>
+            <a
+              href="#"
+              className="inline-block border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-blue-600 transition animate-slideInRight"
+            >
+              Learn More
+            </a>
+          </div>
+
+          {/* Image Section */}
+          <div className="lg:w-1/2 text-center">
+             
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="w-full py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center gap-10">
+          {/* Image Section */}
+          <div className="w-full lg:w-1/2 animate-zoomIn">
+            <img src="/img/about.png" alt="About" className="w-full h-auto" />
+          </div>
+
+          {/* Text Section */}
+          <div className="w-full lg:w-1/2 animate-fadeInUp">
+            <div className="inline-block border border-blue-600 text-blue-600 px-4 py-1 rounded-full mb-3 text-sm font-medium">
+              About Us
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Award Winning Consultancy Agency For Your Business
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor
+              sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et
+              lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
+              justo et tempor eirmod
+            </p>
+
+            {/* Service Boxes */}
+            <div className="space-y-6 mb-6">
+              {/* Business Planning */}
+              <div className="flex">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white flex items-center justify-center rounded-full text-xl">
+                  <i className="fa fa-user-tie"></i>
+                </div>
+                <div className="ml-4">
+                  <h6 className="text-lg font-semibold">Business Planning</h6>
+                  <p className="text-gray-600 text-sm">
+                    Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos
+                    erat ipsum lorem et sit sed stet lorem sit clita duo
+                  </p>
+                </div>
+              </div>
+
+              {/* Financial Analysis */}
+              <div className="flex">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white flex items-center justify-center rounded-full text-xl">
+                  <i className="fa fa-chart-line"></i>
+                </div>
+                <div className="ml-4">
+                  <h6 className="text-lg font-semibold">Financial Analysis</h6>
+                  <p className="text-gray-600 text-sm">
+                    Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos
+                    erat ipsum lorem et sit sed stet lorem sit clita duo
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Read More Button */}
+            <a
+              href="#"
+              className="inline-block bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div className="w-full py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Section Heading */}
+        <div className="text-center max-w-xl mx-auto mb-12 animate-fadeInUp">
+          <div className="inline-block border border-blue-600 text-blue-600 px-4 py-1 rounded-full mb-3 text-sm font-medium">
+            Our Team
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Meet Our Team Members
+          </h2>
+        </div>
+
+        {/* Team Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className="text-center animate-fadeInUp"
+              style={{ animationDelay: member.delay }}
+            >
+              <h5 className="text-lg font-semibold">{member.name}</h5>
+              <p className="text-gray-500 mb-4">{member.designation}</p>
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full rounded-full mb-4"
+              />
+              <div className="flex justify-center space-x-2">
+                <a
+                  href="#"
+                  className="w-9 h-9 flex items-center justify-center text-blue-600 bg-white border border-gray-200 rounded-full hover:bg-blue-100 transition"
+                >
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  className="w-9 h-9 flex items-center justify-center text-blue-600 bg-white border border-gray-200 rounded-full hover:bg-blue-100 transition"
+                >
+                  <i className="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  className="w-9 h-9 flex items-center justify-center text-blue-600 bg-white border border-gray-200 rounded-full hover:bg-blue-100 transition"
+                >
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
     <Slider/>
     <section className="schedule py-12 bg-gray-100">
   <div className="container mx-auto px-4">
